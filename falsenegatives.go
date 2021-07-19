@@ -9,6 +9,7 @@ package goaway
 //
 // Note that there is a test that prevents words from being in both profanities and falseNegatives,
 var falseNegatives = []string{
+	"2 girls 1 cup", // this only matches as a false negative since we split the input string on spaces
 	"asshole",
 	"dumbass", // ass -> bASS (FP) -> dumBASS
 	"nigger",
