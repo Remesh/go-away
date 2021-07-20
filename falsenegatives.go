@@ -11,6 +11,9 @@ package goaway
 var falseNegatives = []string{
 	"2 girls 1 cup", // this only matches as a false negative since we split the input string on spaces
 	"asshole",
+	"brown shower",
+	"brown showers",
+	"carpet muncher",
 	"dumbass", // ass -> bASS (FP) -> dumBASS
 	"nigger",
 }
