@@ -1,26 +1,29 @@
 package goaway
 
-// falsePositives is a list of words that may wrongly trigger the profanities
-var falsePositives = []string{
-	"analy",
+// DefaultFalsePositives is a list of words that may wrongly trigger the DefaultProfanities
+var DefaultFalsePositives = []string{
+	"analy", // analysis, analytics
 	"arsenal",
 	"assassin",
 	"assaying", // was saying
 	"assert",
 	"assign",
 	"assimil",
+	"assist",
 	"associat",
 	"assum", // assuming, assumption, assumed
 	"assur", // assurance
 	"banal",
 	"basement",
 	"bass",
-	"cass", // cassie, cassandra, carcass
+	"cass",   // cassie, cassandra, carcass
+	"butter", // butter, butterfly
 	"butthe",
 	"canvass",
 	"circum",
 	"clitheroe",
 	"cockburn",
+	"cocktail",
 	"cumber",
 	"cumbing",
 	"cumulat",
@@ -34,9 +37,14 @@ var falsePositives = []string{
 	"grape",
 	"grass",
 	"harass",
+	"hass",
 	"horniman",
+	"hotwater",
 	"identit",
-	"lass", // class
+	"kassa", // kassandra
+	"kassi", // kassie, kassidy
+	"lass",  // class
+	"leafage",
 	"libshitz",
 	"leafage",
 	"magnacumlaude",
@@ -45,8 +53,13 @@ var falsePositives = []string{
 	"pass", // compass, passion
 	"penistone",
 	"phoebe",
+	"phoenix",
 	"pushit",
 	"sassy",
+	"saturday",
+	"scrap", // scrap, scrape, scraping
+	"serfage",
+	"sexist", // systems exist, sexist
 	"shoe",
 	"scunthorpe",
 	"shitake",
@@ -54,6 +67,8 @@ var falsePositives = []string{
 	"sussex",
 	"serfage",
 	"therapist",
+	"therapeutic",
 	"tysongay",
+	"wass",
 	"wharfage",
 }

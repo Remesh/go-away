@@ -119,3 +119,19 @@ func BenchmarkProfanityDetector_Sanitize(b *testing.B) {
 	}
 	b.ReportAllocs()
 }
+
+func BenchmarkCensor(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Censor("Thundercunt c()ck")
+	}
+	b.ReportAllocs()
+}
+
+func BenchmarkIsProfaneConcurrently(b *testing.B) {
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			IsProfane("aaaaafuckaaaaa")
+		}
+	})
+	b.ReportAllocs()
+}
