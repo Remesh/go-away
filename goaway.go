@@ -18,7 +18,6 @@ const (
 var (
 	defaultProfanityDetector *ProfanityDetector
 	removeAccentsTransformer transform.Transformer
-	profanitySet             map[string]bool
 )
 
 // ProfanityDetector contains the dictionaries as well as the configuration
@@ -38,12 +37,6 @@ type ProfanityDetector struct {
 
 // NewProfanityDetector creates a new ProfanityDetector
 func NewProfanityDetector() *ProfanityDetector {
-	if profanitySet == nil {
-		profanitySet = make(map[string]bool)
-		for _, profanity := range profanities {
-			profanitySet[profanity] = true
-		}
-	}
 	return &ProfanityDetector{
 		sanitizeSpecialCharacters: true,
 		sanitizeLeetSpeak:         true,
