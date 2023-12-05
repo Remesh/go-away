@@ -1,9 +1,9 @@
 package goaway
 
-// profanities is a list of profanities that are checked after the falsePositives are removed
+// DefaultProfanities is a list of profanities that are checked after the DefaultFalsePositives are removed
 //
-// Note that some words that would normally be in this list may be in falseNegatives
-var profanities = []string{
+// Note that some words that would normally be in this list may be in DefaultFalseNegatives
+var DefaultProfanities = []string{
 	"anal",
 	"arsehole",
 	"ass",
@@ -23,6 +23,7 @@ var profanities = []string{
 	"blowjob",
 	"blowjobs",
 	"boner",
+	"boob",
 	"boobs",
 	"booobs",
 	"boooobs",
@@ -31,10 +32,14 @@ var profanities = []string{
 	"bukake",
 	"bukkake",
 	"bullshit",
+	"bugger",
 	"butthole",
+	"butt",
 	"cawk",
 	"chink",
+	"choad",
 	"clit",
+	"clitoris",
 	"clits",
 	"cnut",
 	"cock",
